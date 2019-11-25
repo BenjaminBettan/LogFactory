@@ -17,7 +17,7 @@ public class LogFactory {
 		lireFluxDepuisFichierProp();
 
 		for (String nomFlux : listeFlux) {
-			new Flux((Properties) prop.clone(),new HashMap<String, List<String>>(m_flux),nomFlux).start();
+			new Flux((Properties) prop.clone(),new ArrayList<String>(m_flux.get(nomFlux)),nomFlux).start();
 		}
 
 	}
